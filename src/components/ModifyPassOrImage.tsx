@@ -107,15 +107,15 @@ const ModifyPassOrImage: FunctionComponent<IModal> = ({ visible, closeConfig, re
         >
             { req == "PASS" &&
                 <>
-                    <h3 className={styles.infoNewPass}>
-                        A senha deve ter no minimo 8 caracteres e conter letras Minúsculas e Maiúsculas
-                    </h3>
                     {alerta.alert && <Alerta message={alerta.message} type={alerta.type}/>}
                     <div className={styles.onClosedConfig}>
                         <button onClick={closeModal} className={styles.btnCloseConfig}>
                             <MdClose size={30} color={'#4A21C0'}/>
                         </button>
                     </div>
+                    <h3 className={styles.infoNewPass}>
+                        A senha deve ter no minimo 8 caracteres e conter letras Minúsculas e Maiúsculas
+                    </h3>
                     <form className={styles.formModify}>
                         <div className={styles.inputsGroupModifyPass}>
                             <input

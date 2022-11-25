@@ -127,15 +127,14 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media (max-width: 750px) and (min-width: 401px) {
+  .form {
+    width: 50vw;
   }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
+}
+
+@media (max-width: 400px) {
+  .form {
+    width: 80vw;
   }
 }
