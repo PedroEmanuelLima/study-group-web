@@ -94,7 +94,6 @@ export default function GetGroup() {
                                     {documentos.map((doc) => (
                                         <Documento
                                             key={doc._id}
-                                            _id={doc._id}
                                             secure_url={doc.secure_url}
                                             descricao={doc.descricao}
                                         />
