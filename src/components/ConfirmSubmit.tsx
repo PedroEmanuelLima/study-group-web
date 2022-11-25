@@ -10,41 +10,32 @@ interface IModalSubmit {
     modalOpen: boolean,
     setModalOpen: Function,
     grupo: string | undefined,
-    atualizar: Function
+    setDocumentos: Function
 }
 
 const ConfirmSubmit: FunctionComponent<IModalSubmit> = ({modalOpen, setModalOpen,
-    grupo, atualizar}) => {
+    grupo, setDocumentos}) => {
 
     const { sendDoc, alertar } = useContext(AuthContext);
-
-    const [submetido, setSubmetido] = useState<boolean>(false);
     const [selectedFile, setSelectedFile] = useState<any>(null);
-    const [nomeArquivo, setNomeArquivo] = useState('');
     const [documento, setDocumento] = useState<IUploadDoc>({
         descricao: '',
         documento: null
-    })
+    });
+
+    useEffect(() => {
+        if (selectedFile) {
+            setDocumento(prevState => {
+                return {...prevState, documento: selectedFile}
+            })
+        }
+    }, [selectedFile])
     
     const closeModal = () => {
         setModalOpen(false);
         setSelectedFile(null);
-        setDocumento({descricao: '', documento: null})
-        setNomeArquivo('')
+        setDocumento({descricao: '', documento: null});
     };
-
-    useEffect(() => {
-        if (selectedFile) {
-            setNomeArquivo(selectedFile.name)
-            setDocumento(prevState => {
-                return { ...prevState, documento: selectedFile }
-            });
-        }
-    }, [selectedFile]);
-
-    useEffect(() => {
-        if (submetido) atualizar();
-    }, [submetido]);
 
     const submitDoc = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
@@ -58,8 +49,7 @@ const ConfirmSubmit: FunctionComponent<IModalSubmit> = ({modalOpen, setModalOpen
             closeModal();
             return;
         }
-        sendDoc(documento, grupo, setSubmetido);
-        
+        const submeido = sendDoc(documento, grupo, setDocumentos);
         closeModal();
     }
 
@@ -79,7 +69,7 @@ const ConfirmSubmit: FunctionComponent<IModalSubmit> = ({modalOpen, setModalOpen
                         onFileSelect={(file: any) => setSelectedFile(file)}
                     />
                     <span className={styles.fileName}>
-                        {nomeArquivo != '' ? nomeArquivo : "Anexar seu arquivo PDF"}
+                        {documento.documento?.name || "Anexar seu arquivo PDF"}
                     </span>
                 </div>
                 
