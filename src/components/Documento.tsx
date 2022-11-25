@@ -16,7 +16,6 @@ const Documento: FunctionComponent<Omit<IDocumento, '_id' | 'cloudinary_id' | 'g
                         className={styles.groupBtn}
                         href={secure_url}
                         target="_blank"
-                        ref={descricao}
                         rel="noopener noreferrer"
                     >
                         <MdRemoveRedEye size={40}/>
