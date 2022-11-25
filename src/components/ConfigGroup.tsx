@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useContext, FunctionComponent } from 'react';
+import React, { useContext, FunctionComponent } from 'react';
 import Modal from 'react-modal';
-import { IUploadDoc } from '../interfaces/IDocumento';
-import SubmitDocument from './SubmitDocument';
 
 import styles from '../styles/Components.module.css';
 import { AuthContext } from '../contexts/auth';

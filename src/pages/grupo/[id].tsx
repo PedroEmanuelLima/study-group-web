@@ -39,20 +39,14 @@ export default function GetGroup() {
                 alertar("Grupo Inacessiél", 1500, "error");
                 rota.push('/');
             });
-            atualizar();
+            api.get(`documento/${id}`)
+                .then((res: any) => {
+                    setDocumentos(res.data)
+                    setCarregado(true);
+                });
         }
 
     }, [id]);
-
-    const atualizar = () => {
-        setCarregado(false);
-        setDocumentos([]);
-        api.get(`documento/${id}`)
-        .then((res: any) => {
-            setDocumentos(res.data)
-            setCarregado(true);
-        });
-    }
 
     return(
         <>
@@ -70,7 +64,7 @@ export default function GetGroup() {
             <>
                 {alerta.alert && <Alerta message={alerta.message} type={alerta.type} />}
                 <ConfirmSubmit
-                    atualizar={atualizar}
+                    setDocumentos={setDocumentos}
                     grupo={id?.toString()}
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
@@ -100,6 +94,7 @@ export default function GetGroup() {
                                     {documentos.map((doc) => (
                                         <Documento
                                             key={doc._id}
+                                            _id={doc._id}
                                             secure_url={doc.secure_url}
                                             descricao={doc.descricao}
                                         />

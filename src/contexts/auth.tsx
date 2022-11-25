@@ -221,8 +221,7 @@ const AuthProvider = ({ children }: props) => {
         return true;
     }
 
-    function sendDoc(documento: IUploadDoc, grupoID: string, submetido: Function){
-        
+    function sendDoc(documento: IUploadDoc, grupoID: string, setDocs: Function){
         const formData = new FormData();
         formData.append("file", documento.documento);
         formData.append("descricao", documento.descricao);
@@ -230,13 +229,13 @@ const AuthProvider = ({ children }: props) => {
 
         api.post('documento/send', formData, {headers: { "Content-Type": "multipart/form-data" },})
             .then((res: any) => {
-                submetido(true);
                 alertar(res.data.message, 1500, "success");
+                setDocs(res.data.arquivos);
             })
             .catch((err: any) => {
                 console.log(err);
                 alertar(err.response.data.message, 2500, "error");
-            })
+            });
     }
 
     function joinGroup(estudanteId: string, grupoId: string){

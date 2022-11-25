@@ -1,11 +1,11 @@
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent } from 'react';
 import { MdRemoveRedEye } from 'react-icons/md';
 
 import { IDocumento } from '../interfaces/IDocumento';
 import styles from '../styles/Group.module.css';
 
 
-const Documento: FunctionComponent<Omit<IDocumento, '_id' | 'cloudinary_id' | 'grupo'>> = ({descricao, secure_url}) => {
+const Documento: FunctionComponent<Omit<IDocumento, 'cloudinary_id' | 'grupo'>> = ({_id, descricao, secure_url}) => {
 
     return(
         <>
@@ -16,6 +16,7 @@ const Documento: FunctionComponent<Omit<IDocumento, '_id' | 'cloudinary_id' | 'g
                         className={styles.groupBtn}
                         href={secure_url}
                         target="_blank"
+                        rel={`Documento do grupo ${_id}`}
                     >
                         <MdRemoveRedEye size={40}/>
                     </a>
