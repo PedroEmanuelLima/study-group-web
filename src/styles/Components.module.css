@@ -1,0 +1,510 @@
+.contentImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image{
+    width: 90px;
+    height: 90px;
+    border: 2px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.textLabel {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.inputFile {
+    display: none;
+    flex: 1;
+}
+
+/* ------------------- header ----------------------- */
+.headerContainer{
+    background-color: #4A21C0;
+    width: 100%;
+    height: 12vh;
+    padding: 0px 20px;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnProfile {
+    position: relative;
+    max-width: 75px;
+    max-height: 75px;
+    min-width: 55px;
+    min-height: 55px;
+    width: 3rem;
+    height: 3rem;
+    background: none;
+    border: none;
+}
+
+.imageProfile {
+    max-width: 75px;
+    max-height: 75px;
+    min-width: 55px;
+    min-height: 55px;
+    background-size: cover;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+}
+
+.listaDeLinks > li {
+    padding: 20px 0px;
+}
+
+.imageProfile:hover, .listaDeLinks > li:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgb(80, 80, 80, 0.2);
+}
+
+
+.headerContainer, .listaDeLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.links{
+    font-size: clamp(0.3rem, 0.4rem + 1vw, 1.5rem);
+    }
+
+.listaDeLinks {
+    overflow: hidden; 
+    list-style: none;
+}
+
+.links:hover {
+    color: #AAA;
+}
+
+.linkContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+/* -------------------------- Search ------------------------ */
+
+.search {
+    margin-top: 12vh;
+    width: 50%;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+
+.inputSearch::placeholder {
+    color: #AAA;
+    font-size: clamp(0.5em, 1em, 1.5em);
+  }
+  
+  .inputSearch:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+  
+  .inputSearch {
+    width: 100%;
+    color: #000;
+    border: none;
+    background: none;
+    font-size: clamp(0.6em, 1.1em, 1.6em);
+  }
+
+  .btnSearch {
+    background: none;
+    border: none;
+    color: #AAA;
+  }
+
+  /* --------------------- Group Card ------------------------- */
+.btnCardGroup{
+    width: 70%;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+}
+
+.cardMyGroup {
+    width: 100%;
+    border: 2px solid #FFF;
+    margin-top: 1em;
+    padding: 0 1em 0 0.7em;
+    background-color: #4A21C0;
+    border-radius: 8px;
+}
+
+.cardGroup {
+    width: 70%;
+    border: 2px solid #FFF;
+    margin-top: 1em;
+    padding: 0 1em 0 0.7em;
+    background-color: #4A21C0;
+    border-radius: 8px;
+}
+
+.startGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleGroup {
+    font-size: clamp(1.5em, 2em, 2.5em);
+    text-align: left;
+}
+
+.dia {
+    font-size: clamp(0.2em, 0.7em, 1.2em);
+}
+
+.descriptionGroup {
+    font-size: clamp(1em, 1.5em, 2em);
+    margin-top: 0;
+    text-align: justify;
+}
+
+.btnContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btnEntrarGroup {
+    font-size: clamp(1em, 1.5em, 2em);
+    background-color: #FFF;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 20px;
+    color: #2148C0;
+}
+
+.btnEntrarGroup:hover {
+    background-color: #AAA;
+}
+
+/* --------------------------------- ModalProfile -------------------------- */
+.modalProfile {
+    width: 30vw;
+    min-width: 150px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    padding-top: 20px;
+    background-color: #FFF;
+    position: absolute;
+    left: 20px;
+    top: 10vh;
+
+    border-radius: 8px;
+}
+
+.btnCloseModal{
+    background: none;
+    border: none;
+    position: absolute;
+    color: #4A21C0;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+}
+
+.btnModal {
+    background: none;
+    border: none;
+    color: #4A21C0;
+    font-size: clamp(0.3rem, 0.5rem + 1vw, 1.5rem);
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 7px;
+    padding: 10px 20px 10px 0px;
+    text-align: left;
+}
+
+@media (max-width: 780px) {
+    .headerContent {
+        width: 90%;
+        padding-left: 10px;
+    }
+
+    .cardGroup, .btnCardGroup{
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .isPath {
+        width: 70%;
+    }
+}
+
+
+.alertContainer{
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .alert {
+    width: 70%;
+  }
+
+/* ---------------------  modal  ------------------- */
+
+.modalFile {
+    width: 50%;
+    border-radius: 20px;
+    background-color: #4A21C0;
+    padding: 10px 20px;
+}
+
+.backModalFile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 72, 192, 0.6);
+}
+
+  .contentForm {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .inputDescricaoDoc {
+    width: 80%;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #FFF;
+    border-radius: 4px;
+  }
+
+  .uploadPdf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inputTag::placeholder {
+    color: #AAA;
+  }
+  
+  .inputTag:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+  
+  .inputTag {
+    flex: 1;
+    color: #FFF;
+    border: none;
+    background: none;
+    font-size: clamp(0.6em, 1em, 1.6em);
+  }
+
+  .fileName{
+    word-break: break-all;
+  }
+
+.pdf{
+    width: 90px;
+    height: 90px;
+    border: 2px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.opcoesModal {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnSubmit {
+    padding: 4px 10px;
+    font-weight: 700;
+    background-color: #FFF;
+    color: #2148C0;
+    border: 2px solid #2148C0;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    margin-top: 50px;
+}
+
+.btnCancel{
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    margin-top: 50px;
+}
+
+
+/* --------------------- Modify Password or Image ------------------- */
+.modalModify {
+    width: 60%;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 10px 10px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formModify{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.inputsGroupModifyPass{
+    border: 2px solid #4A21C0;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+
+.inputModifyPass{
+    background: none;
+    border: none;
+    flex: 1;
+    width: 100%;
+    color: #4A21C0;
+    font-size: clamp(0.3em, 0.3em + 1vw, 1em);
+    display: flex;
+    align-items: center;
+    padding: 6px 3px;
+}
+
+.inputModifyPass:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.inputModifyPass::placeholder{
+    background: none;
+    border: none;
+    color: #4A21C0;
+}
+
+.btnGoupConfig {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnConfig {
+    border: none;
+    width: 40%;
+    font-size: clamp(0.5em, 0.5em + 1vw, 1.5em);
+    background: #2148C0;
+    border-radius: 8px;
+    color: #FFF;
+    padding: 6px 3px;
+}
+
+.onClosedConfig{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btnCloseConfig {
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.imageModify {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContenteModify{
+    border: 3px solid #4A21C0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.modifyImageProfile {
+    border: 2px solid #FFF;
+    border-radius: 50%;   
+}
+
+.labelInputFile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnRemoveImage {
+    background: none;
+    border: none;
+    color: #4A21C0;
+    font-size: clamp(0.1em, 0.2em + 1vw, 1.5em);
+    margin-bottom: 50px;
+}
+
+.btnConfig:disabled {
+    opacity: 0.3;
+}
+
+.infoNewPass{
+    padding: 0px 10px;
+    color: #2148C0;
+    text-align: center;
+}

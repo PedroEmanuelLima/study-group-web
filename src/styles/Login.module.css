@@ -1,0 +1,141 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding-top: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 25vw;
+}
+
+.inputs {
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.inputGroup {
+  width: 100%;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+}
+
+.labelInput{
+  width: 45px;
+}
+
+.inputTag::placeholder {
+  color: #AAA;
+}
+
+.inputTag:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.inputTag {
+  width: 100%;
+  color: #FFF;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.optionsLog {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-;
+}
+
+.btnEntrar {
+  padding: 4px 0px;
+  background-color: #FFF;
+  color: #2148C0;
+  border: 2px solid #2148C0;
+  border-radius: 6px;
+  font-size: 1.4rem;
+}
+
+.btnEntrar:disabled {
+  background-color: #AAB;
+}
+.btnEntrar:hover:disabled {
+  background-color: #AAB;
+}
+
+.btnEntrar:hover{
+  background-color: #DDC;
+  font-weight: 400px;
+}
+
+.divBtnSenha {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btnSenha {
+  width: fit-content;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  background: none;
+  border: none;
+}
+
+.btnSenha:hover, .btnCadastrar:hover {
+  color: #CCC;
+  border-color: #CCC;
+}
+
+.btnEye {
+  width: 12%;
+  min-width: 25px;
+  background: none;
+  border: none;
+}
+
+.btnCadastrar {
+  margin-top: 100px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #FFF;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}

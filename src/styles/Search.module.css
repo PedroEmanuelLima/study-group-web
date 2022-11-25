@@ -1,0 +1,43 @@
+.container {
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
+.main {
+  height: 100%;
+  padding-top: 16px;
+  padding-bottom: 3em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.loadMyGroups {
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}

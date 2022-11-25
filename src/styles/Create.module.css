@@ -1,0 +1,110 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentForm {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.inputGroup {
+  width: 100%;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #FFF;
+  border-radius: 4px;
+}
+
+.inputTag::placeholder {
+  color: #AAA;
+}
+
+.inputTag:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.inputTag {
+  flex: 1;
+  color: #FFF;
+  border: none;
+  background: none;
+  font-size: clamp(0.6em, 1em, 1.6em);
+}
+
+.btnCadastrar {
+  width: 100%;
+  padding: 4px 0px;
+  background-color: #FFF;
+  color: #2148C0;
+  border: 2px solid #2148C0;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  margin-top: 50px;
+}
+
+.btnCadastrar:hover{
+  background-color: #DDC;
+  font-weight: 400px;
+}
+
+.btnCancelar {
+  padding: 4px 0px;
+  padding: 0 4px;
+  color: #FFF;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #FFF;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.btnCancelar:hover {
+  color: #CCC;
+  border-color: #CCC;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
