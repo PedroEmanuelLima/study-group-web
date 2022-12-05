@@ -4,7 +4,8 @@ import passwordValidator from 'password-validator';
 export const api: any = axios.create({
   // baseURL: `https://study-group-api.herokuapp.com/`,
   // baseURL: 'http://localhost:3001/',
-  baseURL: 'https://study-group-api.onrender.com/',
+  // baseURL: 'https://study-group-api.onrender.com/',
+  baseURL: 'https://study-group-api.vercel.app/',
   headers: {
     'Content-Type': 'application/json', 
     'Accept': 'application/json',
